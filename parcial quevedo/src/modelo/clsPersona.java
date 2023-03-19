@@ -1,0 +1,51 @@
+package modelo;
+import java.util.Calendar;
+
+public abstract class clsPersona {
+//ATRIBUTOS
+	//atributos clase
+	private long cedula;
+	private String nombre;
+	private eSexo sexo;
+	private Calendar fechaNacimiento;
+//referencias y/o listado
+//METODOS
+//constructores
+	public clsPersona(){
+	}
+	public clsPersona(long cedula, String nombre,eSexo sexo, Calendar fechaNacimiento){
+	this.cedula= cedula;
+	this.nombre= nombre;
+    this.sexo= sexo;
+	this.fechaNacimiento= fechaNacimiento;
+	}
+//getters y setters
+	public long getCedula() {
+		return cedula;
+	}
+	public void setCedula(long cedula) {
+		this.cedula = cedula;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public eSexo getSexo() {
+		return sexo;
+	}
+	public void setSexo(eSexo sexo) {
+		this.sexo = sexo;
+	}
+	public Calendar getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(Calendar fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+//metodos generales
+	//metodo polimorfico
+	public abstract String imprimirInformación();
+}
